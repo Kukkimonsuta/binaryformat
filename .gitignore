@@ -8,9 +8,7 @@
 /packages/
 
 # resharper
-riderModule.iml
-/_ReSharper.Caches/
-/libs/**/.idea
+/*.sln.DotSettings
 
 # visual studio
 /.vs

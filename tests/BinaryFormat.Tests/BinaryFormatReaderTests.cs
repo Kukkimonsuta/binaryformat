@@ -16,7 +16,7 @@ public class BinaryFormatReaderTests
     [Fact]
     public void Can_read_until_end_index()
     {
-        var reader = new BinaryFormatReader(BinaryFormatTestData.Bytes_10);
+        var reader = new BinaryFormatReader(BinaryFormatTestData.Bytes10);
 
         reader.Skip(4);
         var data = reader.Read(-4);
@@ -29,7 +29,7 @@ public class BinaryFormatReaderTests
     [Fact]
     public void Can_read_until_end_index_zero_size()
     {
-        var reader = new BinaryFormatReader(BinaryFormatTestData.Bytes_10);
+        var reader = new BinaryFormatReader(BinaryFormatTestData.Bytes10);
 
         reader.Skip(4);
         var data = reader.Read(-6);
@@ -43,7 +43,7 @@ public class BinaryFormatReaderTests
         Assert.Throws<IndexOutOfRangeException>(
             () =>
             {
-                var reader = new BinaryFormatReader(BinaryFormatTestData.Bytes_10);
+                var reader = new BinaryFormatReader(BinaryFormatTestData.Bytes10);
                 reader.Skip(4);
                 reader.Read(-8);
             }

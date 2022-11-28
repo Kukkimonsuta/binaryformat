@@ -4,11 +4,11 @@ using Xunit.Abstractions;
 
 namespace BinaryFormat.Network.Tests;
 
-public class IPv4PacketShapeTests
+public class MacAddressShapeTests
 {
     private readonly ITestOutputHelper _testOutputHelper;
 
-    public IPv4PacketShapeTests(ITestOutputHelper testOutputHelper)
+    public MacAddressShapeTests(ITestOutputHelper testOutputHelper)
     {
         _testOutputHelper = testOutputHelper;
     }

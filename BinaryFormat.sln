@@ -24,7 +24,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFormat.EthernetFrame"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFormat.IPv4", "src\BinaryFormat.IPv4\BinaryFormat.IPv4.csproj", "{C2935638-7590-4AE4-8A65-98710D0AC282}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFormat.UDP", "src\BinaryFormat.UDP\BinaryFormat.UDP.csproj", "{D9DD299E-8ED1-4E50-ABAC-258470F026A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFormat.Udp", "src\BinaryFormat.Udp\BinaryFormat.Udp.csproj", "{D9DD299E-8ED1-4E50-ABAC-258470F026A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFormat.Tests", "tests\BinaryFormat.Tests\BinaryFormat.Tests.csproj", "{15B30D8C-9979-4756-B9C7-99EF28CC96BA}"
 EndProject

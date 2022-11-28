@@ -1,7 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using BinaryFormat;
-
-namespace BinaryFormat.Network;
+﻿namespace BinaryFormat.Network;
 
 public ref struct MacAddressShape
 {

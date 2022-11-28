@@ -1,7 +1,3 @@
-// ReSharper disable InconsistentNaming
-
-using BinaryFormat;
-
 namespace BinaryFormat.EthernetFrame;
 
 public ref struct VLANTagShape

@@ -1,8 +1,6 @@
-﻿using BinaryFormat;
+﻿namespace BinaryFormat.UDP;
 
-namespace BinaryFormat.UDP;
-
-public ref struct UDPPacketShape
+public ref struct UdpPacketShape
 {
     public ushort SourcePort;
     public ushort DestinationPort;
@@ -12,9 +10,9 @@ public ref struct UDPPacketShape
     public ReadOnlySpan<byte> Payload;
 }
 
-public static class UDPPacketShapeExtensions
+public static class UdpPacketShapeExtensions
 {
-    private static bool TryReadUDPPacketInternal(ref BinaryFormatReader reader, ref UDPPacketShape udpPacket)
+    private static bool TryReadUdpPacketInternal(ref BinaryFormatReader reader, ref UdpPacketShape udpPacket)
     {
         udpPacket.SourcePort = reader.ReadUInt16();
         udpPacket.DestinationPort = reader.ReadUInt16();
@@ -36,7 +34,7 @@ public static class UDPPacketShapeExtensions
         return true;
     }
 
-    public static bool TryReadUDPPacket(this ref BinaryFormatReader reader, ref UDPPacketShape udpPacket)
+    public static bool TryReadUdpPacket(this ref BinaryFormatReader reader, ref UdpPacketShape udpPacket)
     {
         if (reader.Remainder.Length < 16)
         {
@@ -45,7 +43,7 @@ public static class UDPPacketShapeExtensions
 
         var scope = new BinaryFormatReader(reader.Remainder);
 
-        if (!TryReadUDPPacketInternal(ref scope, ref udpPacket))
+        if (!TryReadUdpPacketInternal(ref scope, ref udpPacket))
         {
             return false;
         }
@@ -54,13 +52,13 @@ public static class UDPPacketShapeExtensions
         return true;
     }
 
-    public static UDPPacketShape ReadUDPPacket(this ref BinaryFormatReader reader)
+    public static UdpPacketShape ReadUdpPacket(this ref BinaryFormatReader reader)
     {
-        var udpPacket = new UDPPacketShape();
+        var udpPacket = new UdpPacketShape();
 
-        if (!TryReadUDPPacket(ref reader, ref udpPacket))
+        if (!TryReadUdpPacket(ref reader, ref udpPacket))
         {
-            throw new InvalidOperationException($"Cannot read {nameof(UDPPacketShape)}");
+            throw new InvalidOperationException($"Cannot read {nameof(UdpPacketShape)}");
         }
 
         return udpPacket;

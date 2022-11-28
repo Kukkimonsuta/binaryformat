@@ -9,10 +9,11 @@ public ref struct BinaryFormatReader
     {
         Data = data;
         Endianness = endianness;
+        Index = 0;
     }
 
     public ReadOnlySpan<byte> Data { get; }
-    public Endianness Endianness { get; private set; }
+    public Endianness Endianness { get; }
 
     public int Index { get; set; }
     public ReadOnlySpan<byte> Remainder => Data[Index..];

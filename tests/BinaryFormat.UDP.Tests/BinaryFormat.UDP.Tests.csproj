@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="../../src/BinaryFormat.UDP/BinaryFormat.UDP.csproj" />
+        <ProjectReference Include="..\..\src\BinaryFormat.Udp\BinaryFormat.Udp.csproj" />
     </ItemGroup>
 
     <ItemGroup>

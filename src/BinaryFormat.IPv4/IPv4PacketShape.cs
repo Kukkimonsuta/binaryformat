@@ -1,5 +1,4 @@
-﻿using System.Buffers;
-using BinaryFormat;
+﻿// ReSharper disable InconsistentNaming
 
 namespace BinaryFormat.IPv4;
 

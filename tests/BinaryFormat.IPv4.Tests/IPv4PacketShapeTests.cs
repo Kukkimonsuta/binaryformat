@@ -1,3 +1,5 @@
+// ReSharper disable InconsistentNaming
+
 using BinaryFormat.IPv4.Tests.Data;
 using Xunit;
 using Xunit.Abstractions;

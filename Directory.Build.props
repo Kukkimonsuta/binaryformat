@@ -13,9 +13,9 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Product>Libpcap .NET</Product>
+        <Product>BinaryFormat</Product>
         <Authors>Lukáš Novotný</Authors>
-        <RepositoryUrl>https://github.com/Kukkimonsuta/libpcap-net</RepositoryUrl>
+        <RepositoryUrl>https://github.com/Kukkimonsuta/binaryformat</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <Copyright>Copyright (c) Lukáš Novotný 2022</Copyright>

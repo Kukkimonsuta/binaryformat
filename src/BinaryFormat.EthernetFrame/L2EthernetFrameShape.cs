@@ -1,5 +1,4 @@
-﻿using BinaryFormat;
-using BinaryFormat.Network;
+﻿using BinaryFormat.Network;
 
 namespace BinaryFormat.EthernetFrame;
 

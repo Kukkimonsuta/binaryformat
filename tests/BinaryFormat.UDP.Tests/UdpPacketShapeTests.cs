@@ -4,11 +4,11 @@ using Xunit.Abstractions;
 
 namespace BinaryFormat.UDP.Tests;
 
-public class UDPPacketShapeTests
+public class UdpPacketShapeTests
 {
     private readonly ITestOutputHelper _testOutputHelper;
 
-    public UDPPacketShapeTests(ITestOutputHelper testOutputHelper)
+    public UdpPacketShapeTests(ITestOutputHelper testOutputHelper)
     {
         _testOutputHelper = testOutputHelper;
     }
@@ -16,9 +16,9 @@ public class UDPPacketShapeTests
     [Fact]
     public void Can_read_ipv4_packet()
     {
-        var reader = new BinaryFormatReader(UDPPacketTestData.Frame01);
+        var reader = new BinaryFormatReader(UdpPacketTestData.Frame01);
 
-        var packet = reader.ReadUDPPacket();
+        var packet = reader.ReadUdpPacket();
 
         Assert.Equal(67, packet.SourcePort);
         Assert.Equal(67, packet.DestinationPort);
