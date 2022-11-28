@@ -1,0 +1,16 @@
+# artefacts
+/src/**/bin/
+/src/**/obj/
+/tests/**/bin/
+/tests/**/obj/
+
+# nuget
+/packages/
+
+# resharper
+riderModule.iml
+/_ReSharper.Caches/
+/libs/**/.idea
+
+# visual studio
+/.vs
