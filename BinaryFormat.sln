@@ -36,6 +36,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFormat.UDP.Tests", "t
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFormat.Network.Tests", "tests\BinaryFormat.Network.Tests\BinaryFormat.Network.Tests.csproj", "{65056B30-B39D-4B58-A5A3-23FF869C44A8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "github", "github", "{E9AF1C5F-C832-4590-8857-C193DA1AE481}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{DCCC3F4E-AFEF-4A1F-A544-91085A7BA2A0}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build.yml = .github\workflows\build.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +59,8 @@ Global
 		{8329453D-8984-4B91-B961-450E89CF8505} = {689C4E93-A816-4214-9E73-A27056980383}
 		{BB0112FA-8A1E-411E-AE0D-7202E637755A} = {689C4E93-A816-4214-9E73-A27056980383}
 		{65056B30-B39D-4B58-A5A3-23FF869C44A8} = {689C4E93-A816-4214-9E73-A27056980383}
+		{E9AF1C5F-C832-4590-8857-C193DA1AE481} = {7DD6CB4F-87DA-4029-8494-62F00ED7A069}
+		{DCCC3F4E-AFEF-4A1F-A544-91085A7BA2A0} = {E9AF1C5F-C832-4590-8857-C193DA1AE481}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CC5DA51B-9203-43B0-9906-5F4F3367CB7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
