@@ -4,14 +4,14 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        
+        <PackageId>BinaryFormat.EthernetFrame</PackageId>
+        <Description>.NET helpers for parsing ethernet frames.</Description>
+        <PackageTags>binaryformat; ethernet; ethernet-frame</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\BinaryFormat.Network\BinaryFormat.Network.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" />
     </ItemGroup>
 
 </Project>

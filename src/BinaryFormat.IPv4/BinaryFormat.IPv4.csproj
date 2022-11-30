@@ -4,14 +4,14 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        
+        <PackageId>BinaryFormat.IPv4</PackageId>
+        <Description>.NET helpers for parsing IPv4 packets.</Description>
+        <PackageTags>binaryformat; ipv4; ipv4-packet</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\BinaryFormat\BinaryFormat.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" />
     </ItemGroup>
 
 </Project>
