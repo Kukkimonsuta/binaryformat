@@ -17,11 +17,11 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore --configuration Release
+      run: dotnet build --no-restore --configuration Release -p:ContinuousIntegrationBuild=true
     - name: Test
-      run: dotnet test --no-build --configuration Release --verbosity normal
+      run: dotnet test --no-build --configuration Release -p:ContinuousIntegrationBuild=true --verbosity normal
     - name: Pack
-      run: dotnet pack --no-build --configuration Release --output publish
+      run: dotnet pack --no-build --configuration Release -p:ContinuousIntegrationBuild=true --output publish
     - name: Push
       run: dotnet nuget push ./publish/*.nupkg --api-key $NUGET_AUTH_TOKEN --source https://api.nuget.org/v3/index.json
       env:
