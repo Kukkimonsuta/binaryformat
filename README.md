@@ -1,6 +1,32 @@
-# binaryformat
+# BinaryFormat [![Build](https://github.com/Kukkimonsuta/binaryformat/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/Kukkimonsuta/binaryformat/actions/workflows/build.yml) [![Publish](https://github.com/Kukkimonsuta/binaryformat/actions/workflows/publish.yml/badge.svg)](https://github.com/Kukkimonsuta/binaryformat/actions/workflows/publish.yml)
 
-Helpers for parsing various binary formats.
+.NET helpers for parsing various binary formats.
+
+### BinaryFormat [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat?logo=nuget)](https://www.nuget.org/packages/binaryformat/)<br>
+
+Commonly used types:
+ - BinaryFormatReader
+
+### BinaryFormat.Network [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat.network?logo=nuget)](https://www.nuget.org/packages/binaryformat.network/)<br>
+
+Commonly used types:
+ - MacAddress
+
+### BinaryFormat.EthernetFrame [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat.ethernetframe?logo=nuget)](https://www.nuget.org/packages/binaryformat.ethernetframe/)<br>
+
+Commonly used types:
+ - L2EthertnetFrame
+ - VLANTag
+
+### BinaryFormat.IPv4 [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat.ipv4?logo=nuget)](https://www.nuget.org/packages/binaryformat.ipv4/)<br>
+
+Commonly used types:
+ - IPv4Packet
+
+### BinaryFormat.Udp [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat.udp?logo=nuget)](https://www.nuget.org/packages/binaryformat.udp/)
+
+Commonly used types:
+ - UdpPacket
 
 ## Usage
 
@@ -20,7 +46,7 @@ Console.WriteLine($"DEI={tag.DEI}");
 Console.WriteLine($"VID={tag.VID}");
 ````
 
-## Parsing new formats
+## Adding support for new formats
 
 1. declare structure to hold parsed information
 

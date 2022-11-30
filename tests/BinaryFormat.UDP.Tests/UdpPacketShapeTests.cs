@@ -1,8 +1,8 @@
-using BinaryFormat.UDP.Tests.Data;
+using BinaryFormat.Udp.Tests.Data;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace BinaryFormat.UDP.Tests;
+namespace BinaryFormat.Udp.Tests;
 
 public class UdpPacketShapeTests
 {
