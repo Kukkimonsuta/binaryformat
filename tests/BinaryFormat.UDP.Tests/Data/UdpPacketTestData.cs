@@ -1,4 +1,4 @@
-namespace BinaryFormat.UDP.Tests.Data;
+namespace BinaryFormat.Udp.Tests.Data;
 
 public static class UdpPacketTestData
 {

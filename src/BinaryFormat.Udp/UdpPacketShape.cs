@@ -1,4 +1,4 @@
-﻿namespace BinaryFormat.UDP;
+﻿namespace BinaryFormat.Udp;
 
 public ref struct UdpPacketShape
 {
