@@ -3,6 +3,7 @@
 /src/**/obj/
 /tests/**/bin/
 /tests/**/obj/
+/publish
 
 # nuget
 /packages/
