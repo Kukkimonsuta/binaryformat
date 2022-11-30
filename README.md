@@ -2,23 +2,23 @@
 
 .NET helpers for parsing various binary formats.
 
-### BinaryFormat [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat?logo=nuget)](https://www.nuget.org/packages/binaryformat/)<br>
+### BinaryFormat [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat?logo=nuget)](https://www.nuget.org/packages/binaryformat/)
 
 Commonly used types:
  - BinaryFormatReader
 
-### BinaryFormat.Network [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat.network?logo=nuget)](https://www.nuget.org/packages/binaryformat.network/)<br>
+### BinaryFormat.Network [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat.network?logo=nuget)](https://www.nuget.org/packages/binaryformat.network/)
 
 Commonly used types:
  - MacAddress
 
-### BinaryFormat.EthernetFrame [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat.ethernetframe?logo=nuget)](https://www.nuget.org/packages/binaryformat.ethernetframe/)<br>
+### BinaryFormat.EthernetFrame [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat.ethernetframe?logo=nuget)](https://www.nuget.org/packages/binaryformat.ethernetframe/)
 
 Commonly used types:
  - L2EthertnetFrame
  - VLANTag
 
-### BinaryFormat.IPv4 [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat.ipv4?logo=nuget)](https://www.nuget.org/packages/binaryformat.ipv4/)<br>
+### BinaryFormat.IPv4 [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat.ipv4?logo=nuget)](https://www.nuget.org/packages/binaryformat.ipv4/)
 
 Commonly used types:
  - IPv4Packet
