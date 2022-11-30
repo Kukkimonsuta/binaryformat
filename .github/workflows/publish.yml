@@ -14,15 +14,15 @@ jobs:
       with:
         dotnet-version: 7.0.x
         include-prerelease: false
-      env:
-        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore --configuration Release
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --configuration Release --verbosity normal
     - name: Pack
-      run: dotnet pack --no-build --output publish
+      run: dotnet pack --no-build --configuration Release --output publish
     - name: Push
-      run: dotnet nuget push ./publish/*.nupkg
+      run: dotnet nuget push ./publish/*.nupkg --api-key $NUGET_AUTH_TOKEN --source https://api.nuget.org/v3/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.NUGET_AUTH_TOKEN}}
