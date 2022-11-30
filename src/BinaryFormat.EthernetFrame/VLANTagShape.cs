@@ -2,14 +2,23 @@ namespace BinaryFormat.EthernetFrame;
 
 public ref struct VLANTagShape
 {
-    public ReadOnlySpan<byte> Data;
+    public ushort TPID;
+    public byte PCP;
+    public bool DEI;
+    public ushort VID;
 }
 
 public static class VLANTagShapeExtensions
 {
     private static bool TryReadVLANTagInternal(ref BinaryFormatReader reader, ref VLANTagShape vlanTag)
     {
-        vlanTag.Data = reader.Read(4);
+        vlanTag.TPID = reader.ReadUInt16();
+
+        var tci = reader.ReadUInt16();
+
+        vlanTag.PCP = (byte)((tci & 0b11100000_00000000) >> 13);
+        vlanTag.DEI = (tci & 0b00010000_00000000) != 0;
+        vlanTag.VID = (ushort)(tci & 0b00001111_11111111);
 
         return true;
     }

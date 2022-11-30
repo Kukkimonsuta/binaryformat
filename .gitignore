@@ -8,7 +8,7 @@
 /packages/
 
 # resharper
-/*.sln.DotSettings
+/*.DotSettings.user
 
 # visual studio
 /.vs

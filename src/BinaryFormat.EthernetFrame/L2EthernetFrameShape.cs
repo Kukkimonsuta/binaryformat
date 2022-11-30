@@ -6,7 +6,8 @@ public ref struct L2EthernetFrameShape
 {
     public MacAddressShape Destination;
     public MacAddressShape Source;
-    public VLANTagShape VLANTag;
+    public VLANTagShape STag;
+    public VLANTagShape CTag;
     public ushort EtherTypeOrSize;
     public ReadOnlySpan<byte> Payload;
     public uint FrameCheckSequence;
@@ -25,9 +26,23 @@ public static class L2EthernetFrameShapeExtensions
             return false;
         }
         l2EthernetFrame.EtherTypeOrSize = reader.PeekUInt16();
-        if (l2EthernetFrame.EtherTypeOrSize == 0x8100)
+
+        if (l2EthernetFrame.EtherTypeOrSize == 0x88a8)
         {
-            if (!reader.TryReadVLANTag(ref l2EthernetFrame.VLANTag))
+            if (!reader.TryReadVLANTag(ref l2EthernetFrame.STag))
+            {
+                return false;
+            }
+            if (!reader.TryReadVLANTag(ref l2EthernetFrame.CTag) || l2EthernetFrame.CTag.TPID != 0x8100)
+            {
+                return false;
+            }
+
+            l2EthernetFrame.EtherTypeOrSize = reader.ReadUInt16();
+        }
+        else if (l2EthernetFrame.EtherTypeOrSize == 0x8100)
+        {
+            if (!reader.TryReadVLANTag(ref l2EthernetFrame.CTag))
             {
                 return false;
             }
