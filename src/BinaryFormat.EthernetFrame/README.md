@@ -1,4 +1,4 @@
-# BinaryFormat.EthernetFrame [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat.ethernetframe?logo=nuget)](https://www.nuget.org/packages/binaryformat.ethernetframe/)<br>
+# BinaryFormat.EthernetFrame [![NuGet Badge](https://img.shields.io/nuget/v/binaryformat.ethernetframe?logo=nuget)](https://www.nuget.org/packages/binaryformat.ethernetframe/)
 
 Part of BinaryFormat library. See [GitHub](https://github.com/Kukkimonsuta/binaryformat) for more information.
 

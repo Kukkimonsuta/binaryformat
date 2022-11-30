@@ -4,14 +4,14 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <PackageId>BinaryFormat.Network</PackageId>
+        <Description>.NET helpers for parsing network formats.</Description>
+        <PackageTags>binaryformat; network</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\BinaryFormat\BinaryFormat.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" />
     </ItemGroup>
 
 </Project>
