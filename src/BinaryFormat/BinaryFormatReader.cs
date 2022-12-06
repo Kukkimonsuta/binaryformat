@@ -142,4 +142,89 @@ public ref struct BinaryFormatReader
         Index += 4;
         return result;
     }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public long PeekInt64()
+    {
+        if (Remainder.Length < 8)
+            throw new IndexOutOfRangeException();
+
+        return Endianness == Endianness.Big ? BinaryPrimitives.ReadInt64BigEndian(Remainder) : BinaryPrimitives.ReadInt64LittleEndian(Remainder);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public long ReadInt64()
+    {
+        var result = PeekInt64();
+        Index += 8;
+        return result;
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public ulong PeekUInt64()
+    {
+        if (Remainder.Length < 8)
+            throw new IndexOutOfRangeException();
+
+        return Endianness == Endianness.Big ? BinaryPrimitives.ReadUInt64BigEndian(Remainder) : BinaryPrimitives.ReadUInt64LittleEndian(Remainder);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public ulong ReadUInt64()
+    {
+        var result = PeekUInt64();
+        Index += 8;
+        return result;
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public Half PeekHalf()
+    {
+        if (Remainder.Length < 2)
+            throw new IndexOutOfRangeException();
+
+        return Endianness == Endianness.Big ? BinaryPrimitives.ReadHalfBigEndian(Remainder) : BinaryPrimitives.ReadHalfLittleEndian(Remainder);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public Half ReadHalf()
+    {
+        var result = PeekHalf();
+        Index += 2;
+        return result;
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public float PeekSingle()
+    {
+        if (Remainder.Length < 4)
+            throw new IndexOutOfRangeException();
+
+        return Endianness == Endianness.Big ? BinaryPrimitives.ReadSingleBigEndian(Remainder) : BinaryPrimitives.ReadSingleLittleEndian(Remainder);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public float ReadSingle()
+    {
+        var result = PeekSingle();
+        Index += 4;
+        return result;
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public double PeekDouble()
+    {
+        if (Remainder.Length < 8)
+            throw new IndexOutOfRangeException();
+
+        return Endianness == Endianness.Big ? BinaryPrimitives.ReadDoubleBigEndian(Remainder) : BinaryPrimitives.ReadDoubleLittleEndian(Remainder);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public double ReadDouble()
+    {
+        var result = PeekDouble();
+        Index += 8;
+        return result;
+    }
 }
